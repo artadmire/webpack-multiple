@@ -1,0 +1,31 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "browsers": [
+                        ">1%" // 编译成全球占有率大于1%的浏览器都可以识别
+                    ]
+                }
+            },
+            "react"
+        ]
+    ],
+    "plugins": [ // es6方法转换成es5所需要的插件
+        [
+            "transform-react-jsx",
+            {
+                "prama": "React.creatElement"
+            }
+        ],
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "libraryDirectory": "es",
+                "style": "css"
+            }
+        ],
+    ]
+}
